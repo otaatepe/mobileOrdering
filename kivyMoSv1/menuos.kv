@@ -1,0 +1,281 @@
+MyLayout:
+    orientation: "vertical"
+    pos_hint: {'center_x':.5}
+
+    MDBottomNavigation:
+        text_color_active: 30/255, 33/255, 45/255, 1
+        #text_color_normal: 234/255, 191/255, 159/255, 1
+        text_color_normal: 182/255, 137/255, 115/255, 1
+        panel_color: 250/255, 243/255, 224/255, 1
+        #panel_color: 234/255, 191/255, 159/255, 1
+        active_font_size: sp(12)
+        inactive_font_size: sp(10)
+        MDBottomNavigationItem:
+
+            text: "home"
+            name: "home"
+            icon: "home"
+
+            BoxLayout:
+                id: menu_home
+                size: root.size
+                orientation: 'vertical'
+                Image:
+
+                    size: self.size
+                    pos: self.pos
+                    keep_ratio: False
+                    allow_stretch: True
+                    source: "dobv1.jpg"
+
+        MDBottomNavigationItem:
+
+            text: "order"
+            name: "order"
+            icon: "food"
+            BoxLayout:
+                orientation: "vertical"
+
+                MDTabs:
+                    id: tabs
+                    on_tab_switch: app.on_tab_switch(*args)
+                    Tab:
+                        text: 'drinks'
+                    Tab:
+                        text: 'sandwiches'
+                    Tab:
+                        text: 'snacks'
+                    Tab:
+                        id: 'merch'
+                        text: 'merch'
+
+                        BoxLayout:
+                            id: menu_order
+                            size: root.size
+                            orientation: 'vertical'
+                            GridLayout:
+                                cols : 2
+                                spacing: 20,10
+                                padding: 10
+
+                                MDCard:
+                                    orientation: "vertical"
+                                    padding: "2dp"
+                                    size: "120dp", "140dp"
+                                    BoxLayout:
+                                        padding: 10,0,10,0
+                                        size_hint_y: .2
+                                        MDLabel:
+                                            text: "Latte"
+                                            theme_text_color: "Secondary"
+                                            height: self.texture_size[1]
+                                    Image:
+                                        size_hint_y: .6
+                                        source: "coffee_cup2.png"
+                                    BoxLayout:
+                                        padding: 10, 0, 10, 10
+                                        size_hint_y: .2
+                                        orientation: 'horizontal'
+                                        MDLabel:
+                                            font_style :"Caption"
+                                            size_hint_y: .5
+                                            #height: self.texture_size[1]
+                                            text: "£2.90"
+                                        MDLabel:
+                                            font_style :"Caption"
+                                            size_hint_y: .5
+                                            font_size: sp(12)
+                                            #height: self.texture_size[1]
+                                            halign: 'right'
+                                            text: "add"
+                                            text_color: 234/255, 191/255, 159/255, 1
+
+                                MDCard:
+                                    orientation: "vertical"
+                                    padding: "2dp"
+                                    size: "120dp", "140dp"
+                                    BoxLayout:
+                                        padding: 10,0,10,0
+                                        size_hint_y: .2
+                                        MDLabel:
+                                            text: "Cappuccino"
+                                            theme_text_color: "Secondary"
+                                            height: self.texture_size[1]
+                                    Image:
+                                        size_hint_y: .6
+                                        source: "coffee_cup2.png"
+                                    BoxLayout:
+                                        padding: 10, 0, 10, 10
+                                        size_hint_y: .2
+                                        orientation: 'horizontal'
+                                        MDLabel:
+                                            font_style :"Caption"
+                                            size_hint_y: .5
+                                            #height: self.texture_size[1]
+                                            text: "£2.90"
+                                        MDLabel:
+                                            font_style :"Caption"
+                                            size_hint_y: .5
+                                            font_size: sp(12)
+                                            #height: self.texture_size[1]
+                                            halign: 'right'
+                                            text: "add"
+                                            text_color: 234/255, 191/255, 159/255, 1
+                                MDCard:
+                                    orientation: "vertical"
+                                    padding: "2dp"
+                                    size: "120dp", "140dp"
+                                    BoxLayout:
+                                        padding: 10,0,10,0
+                                        size_hint_y: .2
+                                        MDLabel:
+                                            text: "Hot Chocolate"
+                                            theme_text_color: "Secondary"
+                                            height: self.texture_size[1]
+                                    Image:
+                                        size_hint_y: .6
+                                        source: "coffee_cup2.png"
+                                    BoxLayout:
+                                        padding: 10, 0, 10, 10
+                                        size_hint_y: .2
+                                        orientation: 'horizontal'
+                                        MDLabel:
+                                            font_style :"Caption"
+                                            size_hint_y: .5
+                                            #height: self.texture_size[1]
+                                            text: "£2.90"
+                                        MDLabel:
+                                            font_style :"Caption"
+                                            size_hint_y: .5
+                                            font_size: sp(12)
+                                            #height: self.texture_size[1]
+                                            halign: 'right'
+                                            text: "add"
+                                            text_color: 234/255, 191/255, 159/255, 1
+                                MDCard:
+                                    orientation: "vertical"
+                                    padding: "2dp"
+                                    size: "120dp", "140dp"
+                                    BoxLayout:
+                                        padding: 10,0,10,0
+                                        size_hint_y: .2
+                                        MDLabel:
+                                            text: "Mocha"
+                                            theme_text_color: "Secondary"
+                                            height: self.texture_size[1]
+                                    Image:
+                                        size_hint_y: .6
+                                        source: "coffee_cup2.png"
+                                    BoxLayout:
+                                        padding: 10, 0, 10, 10
+                                        size_hint_y: .2
+                                        orientation: 'horizontal'
+                                        MDLabel:
+                                            font_style :"Caption"
+                                            size_hint_y: .5
+                                            #height: self.texture_size[1]
+                                            text: "£2.90"
+                                        MDLabel:
+                                            font_style :"Caption"
+                                            size_hint_y: .5
+                                            font_size: sp(12)
+                                            #height: self.texture_size[1]
+                                            halign: 'right'
+                                            text: "add"
+                                            text_color: 234/255, 191/255, 159/255, 1
+                                MDCard:
+                                    orientation: "vertical"
+                                    padding: "2dp"
+                                    size: "120dp", "140dp"
+                                    BoxLayout:
+                                        padding: 10,0,10,0
+                                        size_hint_y: .2
+                                        MDLabel:
+                                            text: "C Machiato"
+                                            theme_text_color: "Secondary"
+                                            height: self.texture_size[1]
+                                    Image:
+                                        size_hint_y: .6
+                                        source: "coffee_cup2.png"
+                                    BoxLayout:
+                                        padding: 10, 0, 10, 10
+                                        size_hint_y: .2
+                                        orientation: 'horizontal'
+                                        MDLabel:
+                                            font_style :"Caption"
+                                            size_hint_y: .5
+                                            #height: self.texture_size[1]
+                                            text: "£2.90"
+                                        MDLabel:
+                                            font_style :"Caption"
+                                            size_hint_y: .5
+                                            font_size: sp(12)
+                                            #height: self.texture_size[1]
+                                            halign: 'right'
+                                            text: "add"
+                                            text_color: 234/255, 191/255, 159/255, 1
+                                MDCard:
+                                    orientation: "vertical"
+                                    padding: "2dp"
+                                    size: "120dp", "140dp"
+                                    BoxLayout:
+                                        padding: 10,0,10,0
+                                        size_hint_y: .2
+                                        MDLabel:
+                                            text: "Chai"
+                                            theme_text_color: "Secondary"
+                                            height: self.texture_size[1]
+                                    Image:
+                                        size_hint_y: .6
+                                        source: "coffee_cup2.png"
+                                    BoxLayout:
+                                        padding: 10, 0, 10, 10
+                                        size_hint_y: .2
+                                        orientation: 'horizontal'
+                                        MDLabel:
+                                            font_style :"Caption"
+                                            size_hint_y: .5
+                                            #height: self.texture_size[1]
+                                            text: "£2.90"
+                                        MDLabel:
+                                            font_style :"Caption"
+                                            size_hint_y: .5
+                                            font_size: sp(12)
+                                            #height: self.texture_size[1]
+                                            halign: 'right'
+                                            text: "add"
+                                            text_color: 234/255, 191/255, 159/255, 1
+
+        MDBottomNavigationItem:
+            text: "cards"
+            name: "cards"
+            icon: "cards"
+            BoxLayout:
+                orientation: "vertical"
+
+                MDTabs:
+                    id: tabs
+                    on_tab_switch: app.on_tab_switch(*args)
+                    Tab:
+                        text: 'cards'
+                    Tab:
+                        text: 'history'
+
+
+
+
+        MDBottomNavigationItem:
+            text: "settings"
+            name: "settings"
+            icon: "account-settings"
+            BoxLayout:
+                id: menu_settings
+                size: root.size
+                orientation: 'vertical'
+                Button:
+                    text: "settings"
+<Tab>:
+    MDLabel:
+        id: label
+        text: "Tab 0"
+        halign: "center"
